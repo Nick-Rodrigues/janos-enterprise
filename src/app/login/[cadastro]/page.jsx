@@ -17,11 +17,13 @@ export default function cadastro() {
         cpf:"",
         rg:"",
         nascimento:"",
-        cep:""
-
+        cep:"",
+        marca:"",
+        modelo:"",
+        nf:""
     })
 
-    const [msg,setMsg] = useState("");
+    const [msg, setMsg] = useState("");
     const [classeLoginMsg, setClasseLoginMsg] = useState("");
 
     useEffect(() => {
@@ -46,30 +48,43 @@ export default function cadastro() {
             const response = await fetch("http://localhost:3000/api/base/base-cad",
             {
                 method: "POST",
-                headers: {"Content-Type": "application/json"},
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(usuario),
             });
 
-            if (response.ok){
+            if (response.ok) {
                 const obj = await response.json();
                 if (obj) {
+                    
                     setMsg("Cadastro realizado com sucesso!");
+                    
                     setTimeout(()=>{
                         setMsg("");
                         navigate.push("/");
-                    },3000);
+                    });
                 } else {
-
+                  
                     setMsg("Ocorreu um erro no preenchimento.");
-                    setTimeout(() => {
+                    setTimeout(()=>{
                         setMsg("");
                         setUsuario({
+                            login:"",
+                            senha:"",
                             email:"",
-                            senha:""
+                            nome:"",
+                            cpf:"",
+                            rg:"",
+                            nascimento:"",
+                            cep:"",
+                            marca:"",
+                            modelo:"",
+                            nf:""
                         });
-                },3000); 
-            }
-        }
+                    },5000);
+                }
+              }
     } catch (error) {
         console.error(error);
     }
@@ -207,10 +222,10 @@ export default function cadastro() {
                     />
                     </div>
                     <div>
-                    <button>CADASTRAR</button>
+                        <button>CADASTRAR</button>
                     </div>
                     <div>
-                    <p>Se você já possui registro.  <Link href="/login">CLIQUE AQUI</Link></p>
+                        <p>Se você já possui registro.  <Link href="/login">CLIQUE AQUI</Link></p>
                     </div>
                 </fieldset>
             </form>

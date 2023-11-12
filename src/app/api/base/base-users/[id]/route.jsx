@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 
 export async function GET(request,{params}){
-    const file = await fs.readFile(process.cwd() + "/src/app/api/base/db,json", 'utf8');
+    const file = await fs.readFile(process.cwd() + "/src/app/api/base/db.json", 'utf8');
 
     const lista = await JSON.parse(file);
 

@@ -8,15 +8,8 @@ export default function page() {
     const navigate = useRouter();
 
     const [usuario, setUsuario] = useState({
-        login:"",
         senha:"",
         email:"",
-        nome:"",
-        cpf:"",
-        rg:"",
-        nascimento:"",
-        cep:""
-
     })
 
     const [msg,setMsg] = useState("");
@@ -60,16 +53,16 @@ export default function page() {
                         
               sessionStorage.setItem("obj-user", JSON.stringify(data.user));
     
-              setMsg("Usuário Validado com Sucesso!");
+              setMsg("Usuário validado com sucesso!");
                 
                 setTimeout(()=>{
                     setMsg("");
                     
                     navigate.push("/");
-                },5000);
+                },3000);
             } else {
               
-                setMsg("Usuário e ou Senha inválidos!!");
+                setMsg("Usuário ou Senha inválidos!");
                 setTimeout(()=>{
                     setMsg("");
                     setUsuario({
@@ -93,33 +86,33 @@ export default function page() {
                 <fieldset>
                     <legend>Login</legend>
                     <div>
-                    <label htmlFor="idEmail">Email:</label>
-                    <input
-                        type="text"
-                        name="email"
-                        id="idEmail"
-                        placeholder="Digite seu Email."
-                        value={usuario.email}
-                        onChange={handleChange}
-                    />
+                      <label htmlFor="idEmail">Email:</label>
+                        <input
+                            type="text"
+                            name="email"
+                            id="idEmail"
+                            placeholder="Digite seu Email."
+                            value={usuario.email}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div>
-                    <label htmlFor="idSenha">Senha:</label>
-                    <input
-                        type="password"
-                        name="senha"
-                        id="idSenha"
-                        placeholder="Digite sua Senha."
-                        value={usuario.senha}
-                        onChange={handleChange}
-                    />
+                      <label htmlFor="idSenha">Senha:</label>
+                        <input
+                            type="password"
+                            name="senha"
+                            id="idSenha"
+                            placeholder="Digite sua Senha."
+                            value={usuario.senha}
+                            onChange={handleChange}
+                        />
                     </div>
 
                     <div>
-                    <button>Login</button>
+                      <button>Login</button>
                     </div>
                     <div>
-                    <p>Se você não possui registro.  <Link href="/cadastro">Clique aqui</Link></p>
+                      <p>Se você não possui registro.  <Link href="/login/cadastro">Clique aqui</Link></p>
                     </div>
                 </fieldset>
             </form>

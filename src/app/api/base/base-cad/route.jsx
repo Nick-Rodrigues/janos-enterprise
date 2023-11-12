@@ -7,9 +7,8 @@ export async function POST(request, response){
         const userRequest = await request.json();
         
         const file = await fs.readFile(
-            process.cwd() + "/src/apop/api/base/db.json",
-            "utf8"
-            );
+            process.cwd() + "/src/apop/api/base/db.json","utf8"
+        );
             
         const lista = await JSON.parse(file);
             
@@ -22,9 +21,10 @@ export async function POST(request, response){
         await fs.writeFile(
             process.cwd() + "/src/app/api/base/db.json",
             JSON.stringify(lista)
-            );
+        );
             
-            return NextResponse.json(userRequest);
+        return NextResponse.json(userRequest);
+        
     } catch (error){
         return NextResponse.json(null)
     }

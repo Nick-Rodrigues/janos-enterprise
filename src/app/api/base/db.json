@@ -2,6 +2,7 @@
     "usuarios": [
         {   
             "id": 1,
+            "login":"Nicolas",
             "nome": "Nicolas",
             "senha": "123",
             "email": "nicolas@gmail.com",
@@ -9,12 +10,13 @@
             "rg": "123456789",
             "nascimento": "09/02/2002",
             "cep": "90060140",
-            "narca": "Caloi",
+            "marca": "Caloi",
             "nodelo": "Caloi 10",
             "nf": "896321"
         },
         {
             "id": 2,
+            "login":"Ana",
             "nome": "Ana",
             "senha": "abc456",
             "email": "ana@yahoo.com",
@@ -22,12 +24,13 @@
             "rg": "987654321",
             "nascimento": "15/07/1990",
             "cep": "70050120",
-            "narca": "Trek",
+            "marca": "Trek",
             "modelo": "Trek FX",
             "nf": "765432"
             },
             {
             "id": 3,
+            "login":"Lucia",
             "nome": "Lucia",
             "senha": "xyz789",
             "email": "lucia@hotmail.com",

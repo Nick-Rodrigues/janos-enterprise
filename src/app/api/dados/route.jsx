@@ -2,16 +2,17 @@ import { NextResponse } from "next/server";
 
 export async function GET(){
     const cadastro = {
+        login: "Nicolas",
         nome: "Nicolas",
         senha: 123,
         email: "nicolas@gmail.com",
-        CPF: 12345678901,
-        RG: 123456789,
-        Nascimento: "09/02/2002",
-        Cep: 90060140,
-        Marca: "Caloi",
-        Modelo: "Caloi 10",
-        Nf: 896321
+        cpf: 12345678901,
+        rg: 123456789,
+        nascimento: "09/02/2002",
+        cep: 90060140,
+        marca: "Caloi",
+        modelo: "Caloi 10",
+        nf: 896321
     }
 
     return NextResponse.json(cadastro);
