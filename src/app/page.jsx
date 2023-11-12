@@ -1,95 +1,41 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+    <>
+      <div className="main-div">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h2 className="titulo-janos">O que é a Janos Enterprise?</h2>
+          <p className="texto-janos">
+            A Janos surgiu como uma empresa parceira da Porto Seguro com
+            objetivo de automatizar o processo de vistoria de bicicletas,
+            fazendo com que gere uma facilidade ao cliente juntamente com uma
+            segurança a seguradora ao concluir a contratação do seguro.
+          </p>
+        </div>
+        <div>
+          <h2 className="titulo-janos">Qual o objetivo do projeto?</h2>
+          <p className="texto-janos">
+            Utilizar uma Inteligência Artificial para contactar o usuário, que
+            irá validar dados sobre o usuário, e será fornecido uma aplicação
+            para ser utilizada a câmera do celular para o envio de fotos da
+            bicicleta, esses dados serão validados pelo banco de dados e
+            certificará que a bicicleta realmente condiz com a bicicleta real.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="titulo-janos">Descrição do Projeto</h2>
+          <p className="texto-janos">
+            Após o acionamento da central para a tentativa do seguro e um
+            pré-cadastro realizado pelo cliente, será encaminhado um link(de
+            modo temporário) que irá direcionar o cliente para uma página onde
+            ele terá que tirar um quantidade de fotos pré definidas e será
+            indicado os locais da bicicleta que serão necessários para tirar as
+            fotos(quadro, soldas e etc). Após o envio das fotos, será enviado
+            para nossa aplicação e validado pelo nosso banco de dados, para
+            possibilitar dar continuação ao processo do seguro..
+          </p>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }
